@@ -35,6 +35,14 @@ navbar:
         - text: "Page D"
           href: page_d.html
 output:
+<<<<<<< HEAD
   html_document:
     theme: journal
     css: styles.css
+=======
+  html_document
+  
+  
+  
+  EDITEDIT
+>>>>>>> 04f322bc4e5dcdda5152e49a879375637b36fd01
