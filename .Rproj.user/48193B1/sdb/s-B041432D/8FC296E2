@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "---\ntitle: Karissa Whiting\n---\n\n### I have a webpage!\n\nAnd I can put all kinds of stuff on it!",
+    "contents" : "---\ntitle: Karissa Whiting\n---\n\n### I have a webpage!\n\nI received a BS in mathematics from Dickinson College in 2007 and a PhD in Biostatistics from Johns Hopkins University in 2012. My dissertation was advised by Ciprian Crainiceanu and Brian Caffo, and focused on statistical methods for high-dimensional structured data. I joined Columbia as an assistant professor in 2012.\n\nMy statistical research is generally focused on functional data analysis, and draws heavily from ongoing collaborations with researchers in other disciplines. One major emphasis is the use of motion kinematics to understand motor control, skill learning, and recovery following stroke; another is physical activity measurement and quantification using wearable devices. The research page has more information on recent projects.\n\nIn 2013, I founded (with Todd Ogden and Phil Reiss) the Functional Data Analysis Working Group (FDAWG) at Columbia Biostat.\n\n\n\n",
     "created" : 1496760646460.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "907687115",
+    "hash" : "639378016",
     "id" : "8FC296E2",
-    "lastKnownWriteTime" : 1496761356,
-    "last_content_update" : 1496761356620,
+    "lastKnownWriteTime" : 1496762738,
+    "last_content_update" : 1496762738845,
     "path" : "~/Repositories/karissawhiting.github.io/index.Rmd",
     "project_path" : "index.Rmd",
     "properties" : {

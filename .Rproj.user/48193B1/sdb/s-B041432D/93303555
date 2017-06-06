@@ -1,14 +1,14 @@
 {
     "collab_server" : "",
-    "contents" : "---\ntitle: \"About\"\n---\n\n### About this site\n\nSometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. \n\nIf this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.",
+    "contents" : "---\ntitle: \"About\"\n---\n\n### About this site\n\nThis page is hosted on github and created using RMD. Source code can be found at https://github.com/karissawhiting/karissawhiting.github.io\n",
     "created" : 1496759694194.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2763228746",
+    "hash" : "2551996039",
     "id" : "93303555",
-    "lastKnownWriteTime" : 1495639099,
-    "last_content_update" : 1495639099,
+    "lastKnownWriteTime" : 1496762485,
+    "last_content_update" : 1496762485070,
     "path" : "~/Repositories/karissawhiting.github.io/about.Rmd",
     "project_path" : "about.Rmd",
     "properties" : {
