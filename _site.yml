@@ -10,6 +10,8 @@ navbar:
     - text: "About"
       icon: fa-info
       href: about.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<kaw2200@cumc.columbia.edu>
     - text: "Projects"
       icon: 
       href: projects.html
