@@ -1,14 +1,30 @@
 ---
 title: Karissa Whiting
 ---
+###Research Assistant at EcoHealth Alliance, 
+###M.S. Biostatistics Candidate at Columbia Univerisity, Mailman School of Public Health
 
-### I have a webpage!
+<br><img src="images/photo1.jpg" alt="kaw" style="width:50%; border:10px solid"><br>
 
-I received a BS in mathematics from Dickinson College in 2007 and a PhD in Biostatistics from Johns Hopkins University in 2012. My dissertation was advised by Ciprian Crainiceanu and Brian Caffo, and focused on statistical methods for high-dimensional structured data. I joined Columbia as an assistant professor in 2012.
 
-My statistical research is generally focused on functional data analysis, and draws heavily from ongoing collaborations with researchers in other disciplines. One major emphasis is the use of motion kinematics to understand motor control, skill learning, and recovery following stroke; another is physical activity measurement and quantification using wearable devices. The research page has more information on recent projects.
+#####"Globalization and anthropogenic changes to the natural world continue to create new opportunities for disease emergence and spread across human and animal systems. As more data becomes available to tackle these complex pathways, researchers and policy makers need novel tools to collect, store, analyze, and interact with this multidisciplinary data. EcoHealth Alliance is working creatively across disciplines to harness these new data challenges to prepare for the next disease threat."
 
-In 2013, I founded (with Todd Ogden and Phil Reiss) the Functional Data Analysis Working Group (FDAWG) at Columbia Biostat.
+I received a BA in Anthropology from New York University in 2013 where I studied Medical Anthropology and a biocultural approach to understanding disease experience and treatment. My work there sparked an interest in research that uses a mix of quantitative and qualitative methods, and in harnessing data to solve complex, interdisciplinary problems.
 
+I am currently a research assistant for the EcoHealth Alliance Data Science and Technology team, where we seek to understand and assess gaps in surveillance, and plan tools and technologies to bridge these gaps with the goal of minimizing delay between disease emergence and detection. At EcoHealth, my work focuses on the assessment and application of digital tools to detect and analyze emerging infectious disease threats before they reach epidemic levels, particularly by finding structured information in nontraditional data sources like news feeds. I assist in design, development, testing, and validation of the Data Science and Technology team’s software projects, as well as conducting research to inform the team’s work.
+
+I am currently pursuing an M.S. in Biostatistics at Columbia University’s Mailman School of Public Health. There, I have worked on various data anlaysis projects, including infectious disease modeling prejects and regression analysis. Visit the [Projects Page](projects.html) to view my latest work. 
+
+##Curriculum Vitae
+My full CV is available here. 
+
+##Contact Information
+Karissa Whiting
+EcoHealth Alliance
+460 West 174th Street, Apt. 1H
+New York, NY 10001
+
+Email:[karissa.whiting@gmail.com](mailto:karissa.whiting@gmail.com)
+Phone: seven one six eight six eight four two seven seven
 
 

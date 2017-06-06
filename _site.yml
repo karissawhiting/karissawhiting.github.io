@@ -1,23 +1,28 @@
 name: "Yay internet!"
 output_dir: "."
 navbar:
-  title: "My Website"
-  type: inverse
+  title: "Karissa Whiting"
+  type:
   left:
+  right:
     - text: "Home"
       icon: fa-home
       href: index.html
     - text: "About"
       icon: fa-info
       href: about.html
-    - icon: fa-envelope fa-lg
-      href: mailto:<kaw2200@cumc.columbia.edu>
     - text: "Projects"
-      icon: 
+      icon: fa-book
       href: projects.html
+    - text: 
+      icon: fa-github fa-lg
+      href: https://github.com/karissawhiting
+    - text:
+      icon: fa-envelope
+      href: mailto:<kaw2200@cumc.columbia.edu>
     - text: "More"
       icon: fa-gear
-      menu:
+      menu: 
         - text: "Heading 1"
         - text: "Page A"
           href: page_a.html
@@ -29,8 +34,7 @@ navbar:
           href: page_c.html
         - text: "Page D"
           href: page_d.html
-  right:
-    - icon: fa-question fa-lg
-      href: https://example.com
 output:
-  html_document
+  html_document:
+    theme: journal
+    css: styles.css
