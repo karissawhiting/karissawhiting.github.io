@@ -1,0 +1,74 @@
+---
+title: Software
+output: html_document
+---
+
+<br>
+
+#### R Packages
+
+```{r results = "asis", echo = FALSE, message=FALSE, warning= FALSE}
+
+library(gh)
+library(tidyverse)
+
+```
+
+```{r results = "asis", echo = FALSE, message=FALSE, warning= FALSE}
+
+my_repos <- gh::gh(
+  "/users/{username}/repos",
+  username = "karissawhiting",
+  sort = "created")
+
+
+
+all <- map_df(my_repos, ~.x[c("name",
+                    "description", 
+                     "html_url", 
+                    "homepage")]) %>%
+  mutate(html_url = 
+           case_when(
+             (homepage == "" | is.na(homepage)) ~ html_url, 
+             TRUE~ homepage, 
+             TRUE ~ html_url))
+
+teach <- all %>% 
+  filter(name %in% c("qsure-r-training-2022","qsure-case-study-2022")) %>%
+  mutate(role = "Instructor")
+
+maintainer <- all %>% filter(name %in% c("cbioportalR", 
+                                         "gnomeR")) %>%
+                                         #, "cureit")) %>%
+  mutate(role = "Maintainer")
+
+author <- all %>% filter(name %in% c("gtsummary", "genieBPC", "bstfun")) %>%
+  mutate(role = "Author")
+
+
+```
+
+```{r results = "asis", echo = FALSE, message=FALSE, warning= FALSE}
+
+author %>% bind_rows(maintainer) %>%
+  arrange(desc(role)) %>%
+  mutate(package_entry =
+      str_glue('&#8226; [**{name}**]({html_url}) ({role}) - {description}') %>%
+      as.character()) %>%
+  dplyr::pull(package_entry) %>% 
+  paste(collapse = "<br>") %>%
+  cat()
+```
+
+#### Courses & Tutorials
+
+```{r results = "asis", echo = FALSE, message=FALSE, warning= FALSE}
+
+teach %>%
+  mutate(package_entry =
+      str_glue('&#8226; [**{name}**]({html_url}) ({role}) - {description}') %>%
+      as.character()) %>%
+  dplyr::pull(package_entry) %>% 
+  paste(collapse = "<br>") %>%
+  cat()
+```

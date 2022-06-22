@@ -1,48 +1,30 @@
-name: "Yay internet!"
+name: "Karissa Whiting"
 output_dir: "."
 navbar:
   title: "Karissa Whiting"
   type:
   left:
+   - text: 
+     icon: fa-home
+     href: index.html
   right:
-    - text: "Home"
-      icon: fa-home
-      href: index.html
-    - text: "About"
-      icon: fa-info
-      href: about.html
-    - text: "Projects"
+    - text: "Research"
       icon: fa-book
-      href: projects.html
+      href: research.html
+    - text: "Software"
+      icon: fa-code
+      href: software.html
     - text: 
       icon: fa-github fa-lg
       href: https://github.com/karissawhiting
+    - text: 
+      icon: fa-twitter fa-lg
+      href: https://twitter.com/karissawhiting
     - text:
       icon: fa-envelope
-      href: mailto:<kaw2200@cumc.columbia.edu>
-    - text: "More"
-      icon: fa-gear
-      menu: 
-        - text: "Heading 1"
-        - text: "Page A"
-          href: page_a.html
-        - text: "Page B"
-          href: page_b.html
-        - text: "---------"
-        - text: "Heading 2"
-        - text: "Page C"
-          href: page_c.html
-        - text: "Page D"
-          href: page_d.html
+      href: mailto:<karissa.whiting@gmail.com>
+
 output:
-<<<<<<< HEAD
   html_document:
-    theme: journal
+    theme: flatly
     css: styles.css
-=======
-  html_document
-  
-  
-  
-  EDITEDIT
->>>>>>> 04f322bc4e5dcdda5152e49a879375637b36fd01

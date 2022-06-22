@@ -1,0 +1,73 @@
+---
+title: Research
+output: html_document
+---
+
+<!-- THESE LINES OF R CODE CREATE THE LIST OF ARTICLES TO CITE -->
+<!-- library("bibtex") -->
+<!-- refs = read.bib(file = "refs.bib") -->
+<!-- for (i in 1:length(refs)){ -->
+<!--   print(refs[[i]]) -->
+<!--   cat("<br><br>") -->
+<!-- } -->
+
+For the most up to date list of publications, check out my <a href="https://scholar.google.com/citations?user=00zHKW8AAAAJ&hl=en">Google Scholar</a> page.
+
+<br>
+
+#### Peer-reviewed Publications
+
+```{r results = "asis", echo = FALSE, message=FALSE, warning= FALSE}
+library(tidyverse)
+df_articles <- 
+  scholar::get_publications('00zHKW8AAAAJ') %>%
+  as_tibble() %>%
+  # delete abstracts
+  filter(
+    !is.na(year), # missing publication year
+    title != str_to_upper(title), # title is all upper case
+    !str_detect(number, fixed("Supplement")), # number contains 'Supplement'
+    !str_detect(number, fixed("_suppl")), # number contains '_suppl'
+    # journal is EU Supplements
+    journal != "European Urology Supplements"
+  ) 
+
+df_articles <- df_articles %>%
+  mutate(author = case_when(
+    str_detect(author, "EV Robilotti") ~ str_replace(author, fixed("EV Robilotti, K Whiting"),
+                                             fixed("K Whiting, EV Robilotti")), 
+    TRUE ~ author)) %>%
+  mutate(
+    first_author = startsWith(author, "K Whiting"),
+    good_journal = journal %in% c("Journal of Clinical Oncology", "The New England journal of medicine"),
+    # replacing ... with 'and others'
+    author = str_replace(author, fixed("..."), fixed("and others")),
+    # bold my name
+    author = 
+      case_when(
+        str_detect(author, fixed("K Whiting, EV Robilotti")) ~ 
+          str_replace(author, fixed("K Whiting, EV Robilotti"), fixed("**K Whiting, EV Robilotti**")),
+        str_detect(author, fixed("K Whiting")) ~ 
+          str_replace(author, fixed("K Whiting"), fixed("**K Whiting**")),
+        !str_detect(author, fixed("Whiting")) ~
+          str_replace(author, fixed("and others"), fixed("**K Whiting**, and others")),
+        TRUE ~ author
+      ),
+    citation = 
+      str_glue('{author} ({year}). "{title}." *{journal}, {number}*') %>%
+      as.character(),
+  ) %>%
+  arrange(desc(first_author), desc(good_journal), desc(year)) %>%
+  mutate(order = 1:nrow(.)) %>%
+  mutate(order = case_when(
+    str_detect(title, fixed("Clinical and Genomic Characterization of Severe")) ~ 1, 
+    TRUE ~ as.numeric(order)
+  )) %>%
+  arrange(order)
+
+df_articles %>%
+  pull(citation) %>% 
+  paste(collapse = "<br><br>") %>%
+  cat()
+```
+

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Research</title>
+
+<script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Karissa Whiting</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="research.html">
+    <span class="fa fa-book"></span>
+     
+    Research
+  </a>
+</li>
+<li>
+  <a href="software.html">
+    <span class="fa fa-code"></span>
+     
+    Software
+  </a>
+</li>
+<li>
+  <a href="https://github.com/karissawhiting">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/karissawhiting">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="mailto:&lt;karissa.whiting@gmail.com&gt;">
+    <span class="fa fa-envelope"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Research</h1>
+
+</div>
+
+
+<!-- THESE LINES OF R CODE CREATE THE LIST OF ARTICLES TO CITE -->
+<!-- library("bibtex") -->
+<!-- refs = read.bib(file = "refs.bib") -->
+<!-- for (i in 1:length(refs)){ -->
+<!--   print(refs[[i]]) -->
+<!--   cat("<br><br>") -->
+<!-- } -->
+<p>For the most up to date list of publications, check out my
+<a href="https://scholar.google.com/citations?user=00zHKW8AAAAJ&hl=en">Google
+Scholar</a> page.</p>
+<p><br></p>
+<div id="peer-reviewed-publications" class="section level4">
+<h4>Peer-reviewed Publications</h4>
+<p><strong>K Whiting, EV Robilotti</strong>, A Lucca, C Poon, R Guest, T
+McMillen, K Jani, and others (2021). “Clinical and Genomic
+Characterization of Severe Acute Respiratory Syndrome Coronavirus 2
+(SARS CoV-2) Infections in mRNA Vaccinated Health Care Personnel in New
+York City.” <em>Clinical Infectious Diseases, </em><br><br>SA Funt, M
+Lattanzi, <strong>K Whiting</strong>, H Al-Ahmadie, C Quinlan, MY Teo,
+and others (2022). “Neoadjuvant atezolizumab with gemcitabine and
+cisplatin in patients with muscle-invasive bladder cancer: A
+multicenter, single-arm, phase II trial.” <em>Journal of Clinical
+Oncology, 40 (12), 1312-1322</em><br><br>H Furberg, S Petruzella,
+<strong>K Whiting</strong>, E Stein, I Orlow, J Kenney, and others
+(2022). “Association of biochemically verified post-diagnosis smoking
+and nonmuscle-invasive bladder cancer recurrence risk.” <em>The Journal
+of Urology, 207 (6), 1200-1206</em><br><br>JE Mandel, DH Kim, H
+Yarmohammadi, E Ziv, ML Keohan, SP D’Angelo, <strong>K Whiting</strong>,
+and others (2022). “Percutaneous cryoablation provides disease control
+for extra-abdominal desmoid-type fibromatosis comparable with surgical
+resection.” <em>Annals of Surgical Oncology, 29 (1),
+640-648</em><br><br>R Perez-Johnston, JA Araujo-Filho, JG Connolly, R
+Caso, <strong>K Whiting</strong>, and others (2022). “CT-based
+radiogenomic analysis of clinical stage I lung adenocarcinoma with
+histopathologic features and oncologic outcomes.” <em>Radiology, 303
+(3), 664-672</em><br><br>MA Mallory, <strong>K Whiting</strong>, A Park,
+M Gönen, E Gilbert, TA King, ML Pilewskie (2022). “Synchronous and
+metachronous bilateral breast cancer among women with a history of
+lobular carcinoma in situ.” <em>Breast Cancer Research and Treatment,
+1-12</em><br><br>D Qualls, HYJ Lam, <strong>K Whiting</strong>, A Kumar,
+MJ Matasar, C Owens, C Nichols, and others (2022). “A phase 1 trial of
+copanlisib plus ibrutinib in relapsed/refractory mantle cell lymphoma.”
+<em>Blood advances, bloodadvances., 2021006555</em><br><br>CM Stewart, L
+Michaud, <strong>K Whiting</strong>, R Nakajima, C Nichols, S De Frank,
+and others (2022). “Phase I/Ib Study of the Efficacy and Safety of
+Buparlisib and Ibrutinib Therapy in MCL, FL, and DLBCL with Serial
+Cell-Free DNA MonitoringBuparlisib and Ibrutinib in Non ….” <em>Clinical
+Cancer Research, 28 (1), 45-56</em><br><br>DD Sjoberg, <strong>K
+Whiting</strong>, M Curry, JA Lavery, J Larmarange (2021). “Reproducible
+Summary Tables with the gtsummary Package..” <em>R Journal, 13
+(1)</em><br><br>S Petruzella, BH Bochner, J Kenney, <strong>K
+Whiting</strong>, K Sadeghi, N Benfante, and others (2021). “Examining
+the accuracy of self-reported smoking-related exposure among recently
+diagnosed nonmuscle invasive bladder cancer patients.” <em>The Journal
+of Urology, 205 (5), 1321-1325</em><br><br>M Sarfaty, <strong>K
+Whiting</strong>, MY Teo, CH Lee, V Peters, J Durocher, AM Regazzi, and
+others (2021). “A phase II trial of durvalumab and tremelimumab in
+metastatic, non‐urothelial carcinoma of the urinary tract.” <em>Cancer
+medicine, 10 (3), 1074-1083</em><br><br>JM Mota, MY Teo, <strong>K
+Whiting</strong>, HA Li, AM Regazzi, CH Lee, SA Funt, and others (2021).
+“Pretreatment eosinophil counts in patients with advanced or metastatic
+urothelial carcinoma treated with anti-PD-1/PD-L1 checkpoint
+inhibitors.” <em>Journal of Immunotherapy, 44 (7),
+248-253</em><br><br>PB Romesser, EJ Sherman, <strong>K Whiting</strong>,
+ML Ho, AR Shaha, MM Sabra, and others (2021). “Intensity‐modulated
+radiation therapy and doxorubicin in thyroid cancer: A prospective phase
+2 trial.” <em>Cancer, 127 (22), 4161-4170</em><br><br>A Alarcon Tomas,
+<strong>K Whiting</strong>, M Maloy, JD Ruiz, S Devlin, and others
+(2021). “The post-transplant scoring system (PTSS) is associated with
+outcomes in patients with MDS after CD34+ selected allogeneic stem cell
+transplant.” <em>Bone Marrow Transplantation, 56 (11),
+2749-2754</em><br><br>V McPherson, B Reardon, A Bhayankara, <strong>K
+Whiting</strong> (2021). “A phase 2 trial of buparlisib in patients with
+platinum-resistant metastatic urothelial carcinoma (vol 126, pg 4532,
+2020).” <em>CANCER, 127 (13), 2376-2376</em><br><br>E Mendelsohn, N
+Ross, AM White, <strong>K Whiting</strong>, C Basaraba, and others
+(2021). “A global repository of novel antimicrobial emergenc e events
+[version 2; peer review: 1 approved, 2 approved with.” <em>,
+</em><br><br>MY Teo, JM Mota, KA Whiting, HA Li, SA Funt, CH Lee, DB
+Solit, and others (2021). “Corrigendum re” Fibroblast Growth Factor
+Receptor 3 Alteration Status is Associated with Differential Sensitivity
+to Platinum-based Chemotherapy in Locally Advanced and ….” <em>European
+urology, 79 (5), e158-e159</em><br><br>DD Sjoberg, M Curry, M Hannum,
+<strong>K Whiting</strong>, EC Zabor (2020). “gtsummary:
+Presentation-ready data summary and analytic result tables.”
+<em>Published online, </em><br><br>MY Teo, JM Mota, KA Whiting, HA Li,
+SA Funt, CH Lee, DB Solit, and others (2020). “Fibroblast growth factor
+receptor 3 alteration status is associated with differential sensitivity
+to platinum-based chemotherapy in locally advanced and metastatic
+urothelial ….” <em>European urology, 78 (6), 907-915</em><br><br>DD
+Sjoberg, M Curry, M Hannum, <strong>K Whiting</strong>, EC Zabor (2020).
+“Gtsummary: Presentation-ready data summary and analytic result tables.
+R package version 1.3. 5.” <em>, </em><br><br>DD Sjoberg, M Curry, M
+Hannum, <strong>K Whiting</strong>, EC Zabor, E Drill (2020).
+“gtsummary: Presentation-Ready Data Summary and Analytic Result Tables
+[Internet]. 2020.” <em>, </em><br><br>E Mendelsohn, N Ross, AM White,
+<strong>K Whiting</strong>, C Basaraba, and others (2020). “Extracting
+novel antimicrobial emergence events from scientific literature and
+medical reports.” <em>F, F1000Research 9</em><br><br>C Machalaba, T
+Allen, A Andre, B Arnold, N Breit, <strong>K Whiting</strong>, WB
+Karesh, and others (2018). “Digital Disease Detection for Health
+Security.” <em>APHA’s, 2018 Annual Meeting &amp; Expo
+(Nov. 10-Nov. 14)</em><br><br>N Ross, A White, C Basaraba, B Watson, E
+Johnson, <strong>K Whiting</strong>, and others (2018). “Generating
+better macroecological data from literature: A case study of
+antimicrobial resistance emergence.” <em>, 2018 ESA Annual Meeting
+(August 5–10)</em><br><br>AG Huff, T Allen, <strong>K Whiting</strong>,
+F Williams, L Hunter, Z Gold, LC Madoff, and others (2017).
+“Biosurveillance: a systematic review of global infectious disease
+surveillance systems from 1900 to 2016..” <em>Revue Scientifique et
+Technique (International Office of Epizootics), 36 (2 …</em><br><br>A
+Huff, T Allen, <strong>K Whiting</strong>, N Breit, B Arnold (2016).
+“FLIRT-ing with Zika: a web application to predict the movement of
+infected travelers validated against the current Zika virus epidemic.”
+<em>PLoS currents, 8</em><br><br>AG Huff, N Breit, T Allen, <strong>K
+Whiting</strong>, C Kiley (2016). “Evaluation and verification of the
+global rapid identification of threats system for infectious diseases in
+textual data sources.” <em>Interdisciplinary perspectives on infectious
+diseases, 2016</em><br><br>A Huff, T Allen, KA Whiting, B Arnold, N
+Breit, A Miessler (2016). “FLIRT, a web application to predict the
+movement of infected travelers validated against the current Zika virus
+epidemic.” <em>International Journal of Infectious Diseases, 53,
+97-98</em></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

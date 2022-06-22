@@ -1,30 +1,71 @@
 ---
-title: Karissa Whiting
+title: ""
+pagetitle: Karissa Whiting
 ---
-###Research Assistant at EcoHealth Alliance, 
-###M.S. Biostatistics Candidate at Columbia Univerisity, Mailman School of Public Health
 
-<br><img src="images/photo1.jpg" alt="kaw" style="width:50%; border:10px solid"><br>
+```{r results = "asis", echo = FALSE, message=FALSE, warning= FALSE, fig.height=5, fig.width=4, out.width= "40%", out.height= "80%", out.extra='style="float:left; padding:15px"'}
+
+require(raster)
+require(ggplot2)
+
+pulsar = function(n){
+  x = seq(0,100, length=n)
+  norms = dnorm(x, mean=40, sd=6)*100 + dnorm(x, mean=60, sd=6)*50
+  noise1 = approx(sample(c(rep(0:8,2),18:19)), n = n, y=NULL)$y
+  noise2 = approx(sample(0:50), n = n, y=NULL)$y
+  noise3 = rnorm(n)
+  abs(norms + norms * noise1 + norms * noise2 * .1 + noise3)
+}
+
+d = apply(sapply(rep(100,50), pulsar), 1, rev)
+d = data.frame(rasterToPoints(raster(d)))
+d$elev = d$layer + d$y * 1200
+
+p = ggplot() + 
+#  labs(x = 'UNKNOWN PLEASURES', y = NULL, title = 'JOY DIVISION') + 
+  theme_minimal() +
+  theme(axis.ticks = element_blank(),
+      panel.grid = element_blank(),
+      axis.text = element_blank(),
+  
+    plot.background = element_rect(fill = "white"), 
+    axis.title.x=element_blank(),
+        axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(), 
+    axis.title.y=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank()
+    #  plot.title = element_text(colour = 'white', size = 76, hjust = .5),
+    #  axis.title.x = element_text(colour = 'white', size = 43)
+    )
+
+for(g in unique(d$y)){
+  dat = subset(d, y == g)
+  p = p + geom_polygon(data=dat, aes(x, elev), fill='#114b5f',
+                       alpha = .7) + 
+    geom_line(data=dat, aes(x, elev), col='#114b5f', alpha=.5) + 
+    xlim(c(.1, .85))
+}
+
+p + xlab("") + ylab("")
+
+```
+
+I am a Research Biostatistician at [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/) in New York City where my research focuses on leveraging multi-modal genomic, radiology and pathology data to characterize cancer risk and predict clinical outcomes. 
+
+I have experience in design, implementation and analysis of clinical trials, as well as retrospective and prospective observational studies. Additionally, I have previous experience in design, development, and validation of digital surveillance tools for assessing emerging infectious disease threats, and currently work with MSK's hospital infectious disease team to monitor and assess the ongoing COVID-19 pandemic.
 
 
-#####"Globalization and anthropogenic changes to the natural world continue to create new opportunities for disease emergence and spread across human and animal systems. As more data becomes available to tackle these complex pathways, researchers and policy makers need novel tools to collect, store, analyze, and interact with this multidisciplinary data. EcoHealth Alliance is working creatively across disciplines to harness these new data challenges to prepare for the next disease threat."
+I earned my M.S. in Biostatistics at Columbia University’s Mailman School of Public Health. 
 
-I received a BA in Anthropology from New York University in 2013 where I studied Medical Anthropology and a biocultural approach to understanding disease experience and treatment. My work there sparked an interest in research that uses a mix of quantitative and qualitative methods, and in harnessing data to solve complex, interdisciplinary problems.
+I am an R enthusiast with an interest in creating software tools to help researchers build reproducible analysis pipelines. 
 
-I am currently a research assistant for the EcoHealth Alliance Data Science and Technology team, where we seek to understand and assess gaps in surveillance, and plan tools and technologies to bridge these gaps with the goal of minimizing delay between disease emergence and detection. At EcoHealth, my work focuses on the assessment and application of digital tools to detect and analyze emerging infectious disease threats before they reach epidemic levels, particularly by finding structured information in nontraditional data sources like news feeds. I assist in design, development, testing, and validation of the Data Science and Technology team’s software projects, as well as conducting research to inform the team’s work.
 
-I am currently pursuing an M.S. in Biostatistics at Columbia University’s Mailman School of Public Health. There, I have worked on various data anlaysis projects, including infectious disease modeling prejects and regression analysis. Visit the [Projects Page](projects.html) to view my latest work. 
+<br>
 
-##Curriculum Vitae
-My full CV is available here. 
+### Contact Information
 
-##Contact Information
-Karissa Whiting
-EcoHealth Alliance
-460 West 174th Street, Apt. 1H
-New York, NY 10001
-
-Email:[karissa.whiting@gmail.com](mailto:karissa.whiting@gmail.com)
+Email: [karissa.whiting@gmail.com](mailto:karissa.whiting@gmail.com)
 Phone: seven one six eight six eight four two seven seven
 
 
