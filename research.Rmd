@@ -33,9 +33,11 @@ df_articles <-
   ) 
 
 df_articles <- df_articles %>%
+  # clean up authors
   mutate(author = case_when(
     str_detect(author, "EV Robilotti") ~ str_replace(author, fixed("EV Robilotti, K Whiting"),
                                              fixed("K Whiting, EV Robilotti")), 
+    str_detect(author, "KA Whiting") ~ str_replace(author, "KA Whiting", "K Whiting"),
     TRUE ~ author)) %>%
   mutate(
     first_author = startsWith(author, "K Whiting"),
