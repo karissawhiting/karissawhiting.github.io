@@ -67,9 +67,17 @@ df_articles <- df_articles %>%
   )) %>%
   arrange(order)
 
+
+# df_articles %>%
+#   pull(citation) %>% 
+#   paste(collapse = "<br><br>") %>%
+#   cat()
+
 df_articles %>%
   pull(citation) %>% 
-  paste(collapse = "<br><br>") %>%
+  paste(collapse = "<br><br></li><li>") %>% 
+  paste0("<ol><li>", ., "</ol>") %>%
   cat()
+
 ```
 
