@@ -37,8 +37,11 @@ df_articles <- df_articles %>%
   mutate(author = case_when(
     str_detect(author, "EV Robilotti") ~ str_replace(author, fixed("EV Robilotti, K Whiting"),
                                              fixed("K Whiting, EV Robilotti")), 
+    str_detect(author, "N Almassi, K Whiting") ~ str_replace(author, fixed("N Almassi, K Whiting"), 
+                                                            fixed("K Whiting, N Almassi")),
     str_detect(author, "KA Whiting") ~ str_replace(author, "KA Whiting", "K Whiting"),
     TRUE ~ author)) %>%
+  
   mutate(
     first_author = startsWith(author, "K Whiting"),
     good_journal = journal %in% c("Journal of Clinical Oncology", "The New England journal of medicine"),
@@ -49,6 +52,8 @@ df_articles <- df_articles %>%
       case_when(
         str_detect(author, fixed("K Whiting, EV Robilotti")) ~ 
           str_replace(author, fixed("K Whiting, EV Robilotti"), fixed("**K Whiting, EV Robilotti**")),
+        str_detect(author, fixed("K Whiting, N Almassi")) ~ 
+          str_replace(author, fixed("K Whiting, N Almassi"), fixed("**K Whiting, N Almassi**")),
         str_detect(author, fixed("K Whiting")) ~ 
           str_replace(author, fixed("K Whiting"), fixed("**K Whiting**")),
         !str_detect(author, fixed("Whiting")) ~
