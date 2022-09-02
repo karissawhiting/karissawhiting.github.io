@@ -13,7 +13,7 @@
 
 <title>Software</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -144,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -309,7 +313,7 @@ $(document).ready(function () {
 href="https://www.karissawhiting.com/cbioportalR/"><strong>cbioportalR</strong></a>
 (Maintainer) - R package to wrap cBioPortal’s API to pull data from
 public or private cBioPortal databases<br>• <a
-href="https://github.com/karissawhiting/gnomeR"><strong>gnomeR</strong></a>
+href="https://mskcc-epi-bio.github.io/gnomeR/"><strong>gnomeR</strong></a>
 (Maintainer) - Package to wrangle and visualize genomic data in R<br>•
 <a
 href="https://genie-bpc.github.io/genieBPC/"><strong>genieBPC</strong></a>
@@ -319,16 +323,34 @@ href="http://www.danieldsjoberg.com/gtsummary"><strong>gtsummary</strong></a>
 (Author) - Presentation-Ready Data Summary and Analytic Result
 Tables<br>• <a
 href="http://www.danieldsjoberg.com/bstfun/"><strong>bstfun</strong></a>
+(Author) - Miscellaneous collection of functions<br>• <a
+href="https://genie-bpc.github.io/genieBPC/"><strong>genieBPC</strong></a>
+(Author) - Creating analytic cohorts from AACR Project GENIE BPC
+clinically annotated genomic data<br>• <a
+href="http://www.danieldsjoberg.com/bstfun/"><strong>bstfun</strong></a>
 (Author) - Miscellaneous collection of functions</p>
 </div>
 <div id="courses-tutorials" class="section level4">
 <h4>Courses &amp; Tutorials</h4>
 <p>• <a
-href="https://github.com/karissawhiting/qsure-case-study-2022"><strong>qsure-case-study-2022</strong></a>
-(Instructor) - Case study for teaching data cleaning, processing and
-modeling in R<br>• <a
-href="https://www.karissawhiting.com/qsure-r-training-2022"><strong>qsure-r-training-2022</strong></a>
-(Instructor) - Materials for Intro to R Training Courses</p>
+href="https://www.karissawhiting.com/intro-to-biostatr/"><strong>Intro
+to BiostatR</strong></a> (Instructor) - Presentation about the MSK
+biostatR umbrella package<br>• <a
+href="https://github.com/karissawhiting/qsure-case-study-2022"><strong>QSURE
+R-Case-Study-2022</strong></a> (Instructor) - Case study for teaching
+data cleaning, processing and modeling in R<br>• <a
+href="https://www.karissawhiting.com/qsure-r-training-2022"><strong>QSURE
+R-R Training 2022</strong></a> (Instructor) - Materials for Intro to R
+Training Courses<br>• <a
+href="https://github.com/Introduction-to-GitHub"><strong>Introduction to
+Github</strong></a> (Instructor) - Introduction to Git &amp; Github<br>•
+<a
+href="http://www.danieldsjoberg.com/rmedicine-gtsummary/"><strong>RMedicine
+R-Gtsummary</strong></a> (Presenter) - R/Medicine 2020: Reproducible
+Research using the {gtsummary} package<br>• <a
+href="https://www.danieldsjoberg.com/clinical-reporting-gtsummary-rmed/"><strong>Clinical
+Reporting Gtsummary RMed</strong></a> (Teaching Assistant) - Clinical
+Reporting with {gtsummary}</p>
 </div>
 
 

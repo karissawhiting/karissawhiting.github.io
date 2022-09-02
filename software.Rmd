@@ -19,8 +19,8 @@ library(tidyverse)
 my_repos <- gh::gh(
   "/users/{username}/repos",
   username = "karissawhiting",
+  type = "all",
   sort = "created")
-
 
 
 all <- map_df(my_repos, ~.x[c("name",
@@ -34,16 +34,39 @@ all <- map_df(my_repos, ~.x[c("name",
              TRUE ~ html_url))
 
 teach <- all %>% 
-  filter(name %in% c("qsure-r-training-2022","qsure-case-study-2022")) %>%
-  mutate(role = "Instructor")
+  filter(name %in% c("qsure-r-training-2022","qsure-case-study-2022",
+                     "clinical-reporting-gtsummary-rmed", "intro-to-biostatr", 
+                     "rmedicine-gtsummary")) %>%
+  mutate(role = case_when(
+    name ==  "clinical-reporting-gtsummary-rmed" ~ "Teaching Assistant", 
+    name == "rmedicine-gtsummary" ~ "Presenter", 
+    TRUE ~ "Instructor"))
 
 maintainer <- all %>% filter(name %in% c("cbioportalR", 
-                                         "gnomeR")) %>%
-                                         #, "cureit")) %>%
+                                         "gnomeR"
+                                         #, "cureit"
+                                         )) %>%
   mutate(role = "Maintainer")
 
 author <- all %>% filter(name %in% c("gtsummary", "genieBPC", "bstfun")) %>%
   mutate(role = "Author")
+
+
+# Organizations 
+# orgs <- gh::gh(
+#   "/user/orgs",
+#   username = "karissawhiting",
+#   sort = "created")
+# 
+# all_orgs <- map_df(orgs, ~.x[c("name",
+#                     "description", 
+#                      "html_url", 
+#                     "homepage")]) %>%
+#   mutate(html_url = 
+#            case_when(
+#              (homepage == "" | is.na(homepage)) ~ html_url, 
+#              TRUE~ homepage, 
+#              TRUE ~ html_url))
 
 
 ```
@@ -64,9 +87,19 @@ author %>% bind_rows(maintainer) %>%
 
 ```{r results = "asis", echo = FALSE, message=FALSE, warning= FALSE}
 
+#manually add github for now
+
+add_on_teach <- tribble(~name, ~html_url, ~description, ~ homepage, ~role,  
+        "introduction-to-github", "https://github.com/Introduction-to-GitHub", "Introduction to Git & Github", "", "Instructor", 
+        )
+
+teach <- teach %>%
+  bind_rows(add_on_teach)
+teach <-  teach %>%
+  arrange(role)
 teach %>%
   mutate(package_entry =
-      str_glue('&#8226; [**{name}**]({html_url}) ({role}) - {description}') %>%
+      str_glue('&#8226; [**{snakecase::to_title_case(name, abbreviations = c("QSURE", "RMed", "RMedicine", "BiostatR", "R"))}**]({html_url}) ({role}) - {description}') %>%
       as.character()) %>%
   dplyr::pull(package_entry) %>% 
   paste(collapse = "<br>") %>%

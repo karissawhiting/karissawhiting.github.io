@@ -13,7 +13,7 @@
 
 <title>Research</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.15/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -144,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -344,12 +348,6 @@ cancer: A multicenter, single-arm, phase II trial.” <em>Journal of
 Clinical Oncology, 40 (12), 1312-1322</em><br><br>
 </li>
 <li>
-R Perez-Johnston, JA Araujo-Filho, JG Connolly, R Caso, <strong>K
-Whiting</strong>, and others (2022). “CT-based radiogenomic analysis of
-clinical stage I lung adenocarcinoma with histopathologic features and
-oncologic outcomes.” <em>Radiology, 303 (3), 664-672</em><br><br>
-</li>
-<li>
 H Furberg, S Petruzella, <strong>K Whiting</strong>, E Stein, I Orlow, J
 Kenney, and others (2022). “Association of biochemically verified
 post-diagnosis smoking and nonmuscle-invasive bladder cancer recurrence
@@ -361,6 +359,12 @@ JE Mandel, DH Kim, H Yarmohammadi, E Ziv, ML Keohan, SP D’Angelo,
 cryoablation provides disease control for extra-abdominal desmoid-type
 fibromatosis comparable with surgical resection.” <em>Annals of Surgical
 Oncology, 29 (1), 640-648</em><br><br>
+</li>
+<li>
+R Perez-Johnston, JA Araujo-Filho, JG Connolly, R Caso, <strong>K
+Whiting</strong>, and others (2022). “CT-based radiogenomic analysis of
+clinical stage I lung adenocarcinoma with histopathologic features and
+oncologic outcomes.” <em>Radiology, 303 (3), 664-672</em><br><br>
 </li>
 <li>
 CM Stewart, L Michaud, <strong>K Whiting</strong>, R Nakajima, C
