@@ -1,0 +1,92 @@
+project:
+  type: website
+  output-dir: .
+  pre-render:
+    - scripts/generate_software.R
+
+website:
+  title: " "
+  site-url: "https://www.karissawhiting.com"
+  description: "Research Biostatistician at Memorial Sloan Kettering Cancer Center"
+  page-footer:
+    left: "© Karissa Whiting"
+  navbar:
+    title: "<span class=\"terminal-name\"><span class=\"terminal-prompt\">&gt;</span> <span class=\"typewriter\">Karissa Whiting</span></span>"
+    right:
+      - text: "Research"
+        icon: journal-bookmark
+        href: research.qmd
+      - text: "Software"
+        icon: code-slash
+        href: software.qmd
+      - text: "Presentations"
+        icon: easel
+        href: presentations.qmd
+      - text: "Exhibitions"
+        icon: image
+        href: exhibitions.qmd
+      - icon: github
+        href: https://github.com/karissawhiting
+      - icon: twitter
+        href: https://twitter.com/karissawhiting
+      - icon: envelope
+        href: mailto:karissa.whiting@gmail.com
+
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    mainfont: "Roboto"
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var el = document.querySelector(".terminal-name .typewriter");
+          if (!el) return;
+          var correctPart = "Karissa Whiti";
+          var wrongTail = "xz";
+          var correctTail = "ng";
+          if (sessionStorage.getItem("typewriter-played")) {
+            el.textContent = correctPart + correctTail;
+            el.classList.add("stopped");
+            return;
+          }
+          sessionStorage.setItem("typewriter-played", "1");
+          el.textContent = "";
+          var i = 0;
+          function typeChar(str, cb) {
+            if (i < str.length) {
+              el.textContent += str[i];
+              i++;
+              setTimeout(function () { typeChar(str, cb); }, 70);
+            } else {
+              i = 0;
+              cb();
+            }
+          }
+          function backspace(count, cb) {
+            if (count > 0) {
+              el.textContent = el.textContent.slice(0, -1);
+              setTimeout(function () { backspace(count - 1, cb); }, 60);
+            } else {
+              cb();
+            }
+          }
+          typeChar(correctPart, function () {
+            typeChar(wrongTail, function () {
+              setTimeout(function () {
+                backspace(wrongTail.length, function () {
+                  typeChar(correctTail, function () {
+                    setTimeout(function () {
+                      el.classList.add("stopped");
+                    }, 10 * 750);
+                  });
+                });
+              }, 500);
+            });
+          });
+        });
+        </script>

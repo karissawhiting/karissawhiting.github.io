@@ -1,0 +1,8 @@
+repo,title,html_url,github_url,paper_url,description,category,role,reviewed,display
+cbioportalR,cbioportalR,https://www.karissawhiting.com/cbioportalR/,https://github.com/karissawhiting/cbioportalR,,R package for programmatically retrieving and formatting data from the cBioPortal cancer genomics database.,package,Creator & Maintainer,Yes,Yes
+cureit,cureit,http://www.karissawhiting.com/cureit/,https://github.com/karissawhiting/cureit,https://doi.org/10.1200/CCI.23.00234,R package for building mixture cure models.,package,Creator & Maintainer,Yes,Yes
+gtsummary,gtsummary,http://www.danieldsjoberg.com/gtsummary,https://github.com/ddsjoberg/gtsummary,https://doi.org/10.32614/RJ-2021-053,R package for producing publication-ready analytical and summary tables.,package,Author,Yes,Yes
+genieBPC,genieBPC,https://genie-bpc.github.io/genieBPC/,https://github.com/GENIE-BPC/genieBPC,https://doi.org/10.1093/bioinformatics/btac796,"R data-processing pipeline that ingests, standardizes, and streamlines analysis of multi-institutional clinico-genomic data from the AACR Project GENIE Biopharma Collaborative.",package,Author,Yes,Yes
+gnomeR,gnomeR,https://mskcc-epi-bio.github.io/gnomeR/,https://github.com/MSKCC-Epi-Bio/gnomeR,,"R toolkit for processing, cleaning, and visualizing data from targeted genomic panels.",package,Author,Yes,Yes
+clinfun,clinfun,https://veseshan.github.io/clinfun/,https://github.com/veseshan/clinfun,,R package implementing methods for clinical trial design.,package,Author,Yes,Yes
+bstfun,bstfun,http://mskcc-epi-bio.github.io/bstfun,https://github.com/MSKCC-Epi-Bio/bstfun,,Miscellaneous collection of functions,package,Author,Yes,Yes

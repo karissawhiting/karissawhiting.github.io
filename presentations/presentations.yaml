@@ -1,0 +1,116 @@
+# Hand-maintained list of presentations, courses, and workshops, rendered
+# by presentations.qmd via presentations-template.ejs.md (same list-item
+# format as software/software-template.ejs.md). Entries render in the order
+# they appear in this file (presentations.qmd sets sort: false) — reorder
+# entries here to change the display order.
+#
+# Fields:
+#   date         - YYYY-MM-01 (day is unused). For an ongoing/multi-year
+#                  entry, use the start date here and set date_display below.
+#   date_display - optional override for the displayed date, e.g.
+#                  "2019 - Present" or "2022 - 2024", when a single
+#                  month/year (derived from `date`) doesn't fit
+#   role         - optional; e.g. "Instructor", "Teaching Assistant". Renders
+#                  before the title as "Role, Title" (same formatting as
+#                  when it was part of the title text)
+#   title        - talk/poster/course/workshop title
+#   venue        - conference / series / institution
+#   type         - "Workshop" or "Presentation"
+#   website_url  - optional link to a course/workshop site or materials
+#   github_url   - optional link to a GitHub repo/org
+#   slides_url   - optional link to slides
+#   video_url    - optional link to a recording
+#   paper_url    - optional link to an associated paper
+#   misc         - optional; set to true to render the entry in the
+#                  collapsible "Other Presentations" section at the bottom
+#                  instead of the main list
+
+- date: 2026-06-01
+  role: "Instructor"
+  title: "Reproducible Analyses in R & AI Best Practices"
+  venue: "Genomics Experience for Masters Students Program (GEMS)"
+  type: "Workshop"
+  website_url: "https://www.karissawhiting.com/reproducibility-in-r/#/coding-workshop-part-1"
+
+- date: 2024-08-01
+  title: "Roundtable Presenter: Harnessing Multi-institutional Genomic Data for Reproducible Biomedical Research"
+  venue: "Joint Statistical Meetings (JSM) 2024"
+  type: "Presentation"
+  misc: true
+
+- date: 2024-07-01
+  role: "Instructor"
+  title: "Interactive Workshop on Visualizations in R"
+  venue: "Bridge to Biostats High School Training Program"
+  type: "Workshop"
+  misc: true
+
+- date: 2024-06-01
+  title: "Debugging R Code"
+  venue: "Coding Workshop Series, MSKCC"
+  type: "Workshop"
+  slides_url: "https://github.com/karissawhiting/debugging-in-r-slides/blob/main/Debugging%20in%20R%202024-06-04.pdf"
+
+- date: 2024-01-01
+  title: "Analyzing Clinical and Genomic Oncological Data with {genieBPC} and {gnomeR}"
+  venue: "GENIE Biopharma Collective Winter Symposium"
+  type: "Presentation"
+  slides_url: "https://github.com/GENIE-BPC/intro_to_genieBPC_and_gnomeR/blob/main/docs/BPC%20Symposium%202024-01-11.pdf"
+
+- date: 2023-09-01
+  title: "Simulations for Phase I CRM Clinical Trial Design"
+  venue: "Coding Workshop Series, MSKCC"
+  type: "Workshop"
+  slides_url: "https://github.com/karissawhiting/crm-design-coding-workshop-slides/blob/main/CRM%20Design%20Coding%20Workshop%202023-09-26.pdf"
+
+- date: 2023-08-01
+  title: "Analyzing Clinical and Genomic Oncological Data with {genieBPC} and {gnomeR}"
+  venue: "R/Medicine Conference"
+  type: "Presentation"
+  slides_url: "https://genie-bpc.github.io/intro_to_genieBPC_and_gnomeR/geniebpc-gnomer-r-med.pdf"
+
+- date: 2022-08-01
+  role: "Teaching Assistant"
+  title: "Clinical Reporting with {gtsummary}"
+  venue: "R/Medicine"
+  type: "Workshop"
+  website_url: "https://www.danieldsjoberg.com/clinical-reporting-gtsummary-rmed/"
+
+- date: 2022-01-01
+  date_display: "2022 - 2024"
+  role: "Instructor"
+  title: "Introduction to GitHub (2 Part Interactive Workshop)"
+  venue: "MSKCC Epi-Bio Training Seminars"
+  type: "Workshop"
+  github_url: "https://github.com/Introduction-to-GitHub"
+
+- date: 2022-01-01
+  date_display: "2022 - 2024"
+  role: "Instructor"
+  title: "Introduction to Cancer Genomics Workshop"
+  venue: "Genomics Experience for Masters Students (GEMS) Program"
+  type: "Presentation"
+  slides_url: "https://github.com/karissawhiting/intro-to-cancer-genomics-slides/blob/main/Intro%20to%20Cancer%20Genomics%202023-06-01.pdf"
+
+- date: 2020-08-01
+  title: "Reproducibility with {gtsummary}"
+  venue: "R/Medicine"
+  type: "Workshop"
+  website_url: "http://www.danieldsjoberg.com/rmedicine-gtsummary/"
+  video_url: "https://www.youtube.com/watch?v=fjAMsGISyXw&t=627s"
+
+- date: 2019-01-01
+  date_display: "2019 - Present"
+  role: "Lead Technical Instructor"
+  title: "Statistical Coding 101 (Lecture Series & Coding Labs)"
+  venue: "Quantitative Sciences Undergraduate Research Experience (QSURE) Program"
+  type: "Workshop"
+  slides_url: "https://www.karissawhiting.com/qsure-r-training-2025/#/qsure-coding-workshop-2025"
+  github_url: "https://github.com/karissawhiting/qsure-r-training-2025"
+
+- date: 2024-09-01
+  title: "Considerations for Clinico-genomic Data Analysis: Avoiding Pitfalls and Building Reproducible Workflows"
+  venue: "Informatics Applications & Tools (IAT), MSKCC Hospital-wide Series"
+  type: "Presentation"
+  misc: true
+

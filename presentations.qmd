@@ -1,0 +1,8 @@
+---
+title: Presentations
+listing:
+  contents: presentations/presentations.yaml
+  template: presentations/presentations-template.ejs.md
+  sort: false
+---
+

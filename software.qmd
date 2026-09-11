@@ -1,0 +1,7 @@
+---
+title: Software
+listing:
+  contents: software/packages.yaml
+  template: software/software-template.ejs.md
+  sort: false
+---

@@ -1,0 +1,84 @@
+---
+image: images/pulsar-art.png
+about:
+  template: trestles
+  links:
+    - text: Email
+      icon: envelope
+      url: "mailto:karissa.whiting@gmail.com"
+    - text: GitHub
+      icon: github
+      url: "https://github.com/karissawhiting"
+    - text: Twitter
+      icon: twitter
+      url: "https://twitter.com/karissawhiting"
+    - text: Research
+      url: "research.qmd"
+    - text: Software
+      url: "software.qmd"
+---
+
+```{r echo = FALSE, message=FALSE, warning=FALSE, include=FALSE}
+
+require(raster)
+require(ggplot2)
+
+pulsar <- function(n) {
+  x <- seq(0, 100, length = n)
+  norms <- dnorm(x, mean = 40, sd = 6) * 100 + dnorm(x, mean = 60, sd = 6) * 50
+  noise1 <- approx(sample(c(rep(0:8, 2), 18:19)), n = n, y = NULL)$y
+  noise2 <- approx(sample(0:50), n = n, y = NULL)$y
+  noise3 <- rnorm(n)
+  abs(norms + norms * noise1 + norms * noise2 * .1 + noise3)
+}
+
+d <- apply(sapply(rep(100, 50), pulsar), 1, rev)
+d <- data.frame(rasterToPoints(raster(d)))
+d$elev <- d$layer + d$y * 1200
+
+p <- ggplot() +
+  theme_minimal() +
+  theme(
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    axis.text = element_blank(),
+
+    plot.background = element_rect(fill = "white"),
+    axis.title.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.title.y = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
+  )
+
+for (g in unique(d$y)) {
+  dat <- subset(d, y == g)
+  p <- p +
+    geom_polygon(data = dat, aes(x, elev), fill = '#333333', alpha = .7) +
+    geom_line(data = dat, aes(x, elev), col = '#333333', alpha = .5) +
+    xlim(c(.1, .85))
+}
+
+p <- p + xlab("") + ylab("")
+
+ggsave(
+  "images/pulsar-art.png",
+  p,
+  width = 3.5,
+  height = 4,
+  dpi = 150,
+  bg = "white"
+)
+```
+
+::: {.column-page}
+
+
+I am a Research Biostatistician at [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/) in New York City where my research focuses on leveraging multi-modal genomic, radiology and pathology data to characterize cancer risk and predict clinical outcomes.
+
+Much of my work is building the tooling behind the research. This includes developing streamlined, validated data pipelines for analyzing large, multi-source biomedical datasets, and open-source R packages that make complex analysis tasks more transparent and reproducible. I also have experience designing and analyzing clinical trials and observational studies. Earlier in my career I worked on a team to build and validate digital surveillance tools for detecting emerging infectious disease threats. 
+
+I earned my M.S. in Biostatistics at Columbia University, Mailman School of Public Health. I am an R enthusiast interested in how to [leverage AI responsibly](https://www.karissawhiting.com/reproducibility-in-r/#/ai-best-practices) to improve the quality and speed of research. In my spare time, I tinker with circuits, and occasionally [make art](exhibitions.qmd).
+
+:::
