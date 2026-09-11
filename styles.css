@@ -222,6 +222,10 @@ img {
   object-fit: contain;
 }
 
+.exhibition-carousel {
+  margin-top: 1em;
+}
+
 div.quarto-about-trestles .about-contents {
   border-left: solid 1px #dee2e6;
   padding-left: 1.5em;
