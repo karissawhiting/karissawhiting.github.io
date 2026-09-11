@@ -251,53 +251,6 @@ div.quarto-about-trestles .about-contents {
   }
 }
 
-.exhibition-filmstrip-wrap {
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
-  margin-top: 1em;
-  max-width: 320px;
-}
-
-.filmstrip-nav {
-  flex: 0 0 auto;
-  width: 1.75em;
-  height: 1.75em;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background: #fff;
-  color: #333;
-  font-size: 1.1rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.filmstrip-nav:hover {
-  border-color: var(--accent-1);
-  color: var(--accent-1);
-}
-
-.exhibition-filmstrip {
-  display: flex;
-  gap: 0.5em;
-  overflow-x: auto;
-  scroll-snap-type: x proximity;
-  padding-bottom: 0.5em;
-  scroll-behavior: smooth;
-  min-width: 0;
-}
-
-.exhibition-filmstrip img {
-  flex: 0 0 auto;
-  height: 100px;
-  width: auto;
-  max-width: none;
-  object-fit: cover;
-  scroll-snap-align: start;
-  cursor: pointer;
-  margin: 0;
-}
-
 main.content {
   padding-right: 2.5em;
 }
