@@ -123,12 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
   var correctPart = "Karissa Whiti";
   var wrongTail = "xz";
   var correctTail = "ng";
-  if (sessionStorage.getItem("typewriter-played")) {
+  var isHome = /(^\/$|\/index\.html$)/.test(window.location.pathname);
+  if (!isHome) {
     el.textContent = correctPart + correctTail;
     el.classList.add("stopped");
     return;
   }
-  sessionStorage.setItem("typewriter-played", "1");
   el.textContent = "";
   var i = 0;
   function typeChar(str, cb) {

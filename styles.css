@@ -278,6 +278,17 @@ div.quarto-about-trestles .about-contents {
   padding-left: 1.5em;
 }
 
+@media (max-width: 991.98px) {
+  div.quarto-about-trestles .about-entity .about-links {
+    align-items: center;
+  }
+
+  div.quarto-about-trestles .about-entity .about-links .about-link {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}
+
 .exhibition-layout {
   display: flex;
   align-items: flex-start;
