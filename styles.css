@@ -249,6 +249,11 @@ img {
 
 .exhibition-carousel .carousel-item {
   height: 500px;
+}
+
+.exhibition-carousel .carousel-item.active,
+.exhibition-carousel .carousel-item-next,
+.exhibition-carousel .carousel-item-prev {
   display: flex;
   align-items: center;
   justify-content: center;
