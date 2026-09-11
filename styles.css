@@ -30,6 +30,12 @@ h1, h1.title {
   margin-bottom: 14px;
 }
 
+@media (max-width: 575.98px) {
+  .navbar-brand .terminal-name {
+    font-size: 1.1rem;
+  }
+}
+
 .terminal-prompt {
   color: var(--accent-2);
 }
