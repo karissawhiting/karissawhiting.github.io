@@ -9,9 +9,6 @@ about:
     - text: GitHub
       icon: github
       url: "https://github.com/karissawhiting"
-    - text: Twitter
-      icon: twitter
-      url: "https://twitter.com/karissawhiting"
     - text: Research
       url: "research.qmd"
     - text: Software

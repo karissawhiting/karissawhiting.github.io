@@ -27,8 +27,6 @@ website:
         href: exhibitions.qmd
       - icon: github
         href: https://github.com/karissawhiting
-      - icon: twitter
-        href: https://twitter.com/karissawhiting
       - icon: envelope
         href: mailto:karissa.whiting@gmail.com
 

@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.karissawhiting.com/software.html</loc>
-    <lastmod>2026-09-09T20:27:51.207Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.karissawhiting.com/research.html</loc>
-    <lastmod>2026-09-11T19:20:25.832Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.karissawhiting.com/index.html</loc>
-    <lastmod>2026-09-09T21:00:26.814Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.karissawhiting.com/publications-template.ejs.html</loc>
-    <lastmod>2026-09-09T02:32:52.695Z</lastmod>
-  </url>
-  <url>
     <loc>https://www.karissawhiting.com/presentations.html</loc>
     <lastmod>2026-09-09T21:26:45.118Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.karissawhiting.com/presentations-template.ejs.html</loc>
-    <lastmod>2026-09-09T16:27:36.267Z</lastmod>
   </url>
   <url>
     <loc>https://www.karissawhiting.com/presentations/presentations-template.ejs.html</loc>
     <lastmod>2026-09-09T22:00:57.263Z</lastmod>
   </url>
   <url>
-    <loc>https://www.karissawhiting.com/software/software-template.ejs.html</loc>
-    <lastmod>2026-09-09T20:27:44.342Z</lastmod>
+    <loc>https://www.karissawhiting.com/index.html</loc>
+    <lastmod>2026-09-11T19:22:47.392Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.karissawhiting.com/research.html</loc>
+    <lastmod>2026-09-11T19:20:29.247Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.karissawhiting.com/research/publications-template.ejs.html</loc>
+    <lastmod>2026-09-11T19:20:13.027Z</lastmod>
   </url>
   <url>
     <loc>https://www.karissawhiting.com/exhibitions.html</loc>
     <lastmod>2026-09-11T18:43:52.708Z</lastmod>
   </url>
   <url>
-    <loc>https://www.karissawhiting.com/research/publications-template.ejs.html</loc>
-    <lastmod>2026-09-11T19:20:13.027Z</lastmod>
+    <loc>https://www.karissawhiting.com/software/software-template.ejs.html</loc>
+    <lastmod>2026-09-09T20:27:44.342Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.karissawhiting.com/software.html</loc>
+    <lastmod>2026-09-09T20:27:51.207Z</lastmod>
   </url>
 </urlset>
