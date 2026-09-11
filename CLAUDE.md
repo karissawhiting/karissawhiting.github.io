@@ -27,4 +27,4 @@ Relevant docs when modifying a listing or template:
 
 # Rules
 
-- check for quarto native (or related tool native) solutions https://quarto.org/docs before custom coding up new ones
+- check for quarto native (or related tool native) solutions https://quarto.org/docs before custom coding up new ones, but this isn't a hard restriction if quarto isn't offering solutions

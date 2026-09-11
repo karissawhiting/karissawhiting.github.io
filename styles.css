@@ -40,6 +40,18 @@ h1, h1.title {
   }
 }
 
+/* Above the navbar's collapse breakpoint (lg, 992px) the nav links always
+   render inline instead of behind the hamburger. In roughly the 992-1200px
+   range there isn't quite enough room for the full nav plus the brand name,
+   and Bootstrap's `.navbar-brand { overflow: hidden; text-overflow: ellipsis }`
+   shrinks the name down to "…" instead. Drop the nav link labels (icons stay)
+   in that range so the name always has room to render in full. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav .nav-link .menu-text {
+    display: none;
+  }
+}
+
 .terminal-prompt {
   color: var(--accent-2);
 }
@@ -276,11 +288,31 @@ img {
 div.quarto-about-trestles .about-contents {
   border-left: solid 1px #dee2e6;
   padding-left: 1.5em;
+  /* .quarto-about-trestles is a Quarto "page-full" block that spans edge to
+     edge of the viewport, unlike the exhibitions page's main.content, which
+     sits in the normal body-content grid column and so gets an extra 1.5em
+     gutter reserved after it before the screen edge. Add that same 1.5em
+     here (on top of main.content's shared padding-right: 3em) so the right
+     padding matches the exhibitions page. */
+  padding-right: 1.5em;
 }
 
 @media (min-width: 850px) {
   div.quarto-about-trestles {
     align-items: center;
+  }
+
+  /* Quarto's own CSS makes .about-contents and the nested main.content grid
+     containers with a 500px-minimum column (via a selector with higher
+     specificity than a plain class selector here), which stops the text
+     side from shrinking whenever the entity/contents row layout is active
+     (both here and in Quarto's own >=992px row layout). Drop the grid
+     entirely so this text column behaves like a plain block — the same way
+     .exhibition-writeup does. */
+  div.quarto-about-trestles .about-contents,
+  div.quarto-about-trestles main.content {
+    display: block !important;
+    min-width: 0;
   }
 }
 
@@ -298,23 +330,6 @@ div.quarto-about-trestles .about-contents {
 
   div.quarto-about-trestles .about-contents {
     flex: 1 1 0;
-    min-width: 0;
-  }
-
-  /* Quarto's own bundled CSS forces a 500px-minimum body-content column on
-     every .page-columns element (not just the top-level one), via a
-     higher-specificity selector than this one — override it with !important
-     so .about-contents can actually shrink below 500px in this row layout. */
-  div.quarto-about-trestles .about-contents.page-columns,
-  div.quarto-about-trestles main.content.page-columns {
-    grid-template-columns:
-      [screen-start] 1.5em
-      [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0px, 1fr)
-      [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset] 1.5em
-      [screen-end] !important;
-  }
-
-  div.quarto-about-trestles main.content.page-columns {
     min-width: 0;
   }
 
