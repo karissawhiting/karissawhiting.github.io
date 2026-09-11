@@ -4,7 +4,7 @@ pagetitle: "Karissa Whiting"
 image: images/pulsar-art.svg
 about:
   template: trestles
-  image-width: min(70%, 420px)
+  image-width: min(75%, 27em)
   links:
     - text: Email
       icon: envelope

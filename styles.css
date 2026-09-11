@@ -29,14 +29,14 @@ h1, h1.title {
 
 .terminal-name {
   font-family: "Courier New", Courier, monospace;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 14px;
 }
 
 @media (max-width: 575.98px) {
   .navbar-brand .terminal-name {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -278,21 +278,44 @@ div.quarto-about-trestles .about-contents {
   padding-left: 1.5em;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 850px) {
   div.quarto-about-trestles {
     align-items: center;
   }
 }
 
 /* Quarto's trestles template stacks to a vertical layout below 992px;
-   hold the side-by-side layout down to 700px instead. */
-@media (min-width: 700px) and (max-width: 991.98px) {
+   hold the side-by-side layout down to 850px instead. */
+@media (min-width: 850px) and (max-width: 991.98px) {
   div.quarto-about-trestles {
     flex-direction: row;
   }
 
   div.quarto-about-trestles .about-entity {
     flex: 0 0 42%;
+    min-width: 0;
+  }
+
+  div.quarto-about-trestles .about-contents {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  /* Quarto's own bundled CSS forces a 500px-minimum body-content column on
+     every .page-columns element (not just the top-level one), via a
+     higher-specificity selector than this one — override it with !important
+     so .about-contents can actually shrink below 500px in this row layout. */
+  div.quarto-about-trestles .about-contents.page-columns,
+  div.quarto-about-trestles main.content.page-columns {
+    grid-template-columns:
+      [screen-start] 1.5em
+      [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0px, 1fr)
+      [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset] 1.5em
+      [screen-end] !important;
+  }
+
+  div.quarto-about-trestles main.content.page-columns {
+    min-width: 0;
   }
 
   div.quarto-about-trestles .about-entity .about-links {
@@ -311,7 +334,7 @@ div.quarto-about-trestles .about-contents {
   }
 }
 
-@media (max-width: 699.98px) {
+@media (max-width: 849.98px) {
   div.quarto-about-trestles .about-entity .about-links {
     align-items: center;
   }
@@ -353,13 +376,13 @@ div.quarto-about-trestles .about-contents {
 }
 
 main.content {
-  padding-right: 2.5em;
+  padding-right: 3em;
 }
 
 /* Let the main content column scale with the viewport instead of
    capping out at Quarto's fixed 800-850px body width. */
 @media (min-width: 992px) {
-  body.fullcontent:not(.floating):not(.docked) .page-columns {
+  body.fullcontent:not(.floating):not(.docked) #quarto-content.page-columns {
     grid-template-columns:
       [screen-start] 1.5em
       [screen-start-inset page-start page-start-inset body-start-outset] 5fr
@@ -372,7 +395,7 @@ main.content {
 }
 
 @media (max-width: 991.98px) and (min-width: 768px) {
-  body.fullcontent:not(.floating):not(.docked) .page-columns {
+  body.fullcontent:not(.floating):not(.docked) #quarto-content.page-columns {
     grid-template-columns:
       [screen-start] 1.5em
       [screen-start-inset page-start page-start-inset body-start-outset] 5fr

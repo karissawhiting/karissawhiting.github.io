@@ -36,6 +36,7 @@ format:
     theme: flatly
     css: styles.css
     mainfont: "Roboto"
+    fontsize: 1.25em
     include-in-header:
       text: |
         <link rel="preconnect" href="https://fonts.googleapis.com">
