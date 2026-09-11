@@ -1,4 +1,6 @@
 ---
+title: " "
+pagetitle: "Karissa Whiting"
 image: images/pulsar-art.png
 about:
   template: trestles
