@@ -8,6 +8,7 @@ website:
   title: " "
   site-url: "https://www.karissawhiting.com"
   description: "Research Biostatistician at Memorial Sloan Kettering Cancer Center"
+  google-analytics: "G-RYV423G7LL"
   page-footer:
     left: "© Karissa Whiting"
   navbar:
