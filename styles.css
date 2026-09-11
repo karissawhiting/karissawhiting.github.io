@@ -278,7 +278,40 @@ div.quarto-about-trestles .about-contents {
   padding-left: 1.5em;
 }
 
-@media (max-width: 991.98px) {
+@media (min-width: 700px) {
+  div.quarto-about-trestles {
+    align-items: center;
+  }
+}
+
+/* Quarto's trestles template stacks to a vertical layout below 992px;
+   hold the side-by-side layout down to 700px instead. */
+@media (min-width: 700px) and (max-width: 991.98px) {
+  div.quarto-about-trestles {
+    flex-direction: row;
+  }
+
+  div.quarto-about-trestles .about-entity {
+    flex: 0 0 42%;
+  }
+
+  div.quarto-about-trestles .about-entity .about-links {
+    flex-direction: row;
+    column-gap: 0.8em;
+    row-gap: 15px;
+    flex-wrap: wrap;
+    width: auto;
+    padding-bottom: 0;
+  }
+
+  div.quarto-about-trestles .about-entity .about-link {
+    font-size: 0.8em;
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 699.98px) {
   div.quarto-about-trestles .about-entity .about-links {
     align-items: center;
   }

@@ -22,4 +22,9 @@ Both `research.qmd` and `presentations.qmd` use Quarto's custom listing feature 
 Relevant docs when modifying a listing or template:
 
 - https://quarto.org/docs/websites/website-listings.html — listing options (contents, sort, fields, filtering, pagination)
+
 - https://quarto.org/docs/websites/website-listings-custom.html — custom listing templates (`template:` + `.ejs` files), the mechanism used above
+
+# Rules
+
+- check for quarto native (or related tool native) solutions https://quarto.org/docs before custom coding up new ones

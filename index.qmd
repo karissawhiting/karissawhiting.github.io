@@ -1,9 +1,10 @@
 ---
 title: " "
 pagetitle: "Karissa Whiting"
-image: images/pulsar-art.png
+image: images/pulsar-art.svg
 about:
   template: trestles
+  image-width: min(70%, 420px)
   links:
     - text: Email
       icon: envelope
@@ -62,11 +63,10 @@ for (g in unique(d$y)) {
 p <- p + xlab("") + ylab("")
 
 ggsave(
-  "images/pulsar-art.png",
+  "images/pulsar-art.svg",
   p,
   width = 3.5,
-  height = 4,
-  dpi = 150,
+  height = 4.2,
   bg = "white"
 )
 ```
