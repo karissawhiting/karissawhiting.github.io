@@ -12,6 +12,10 @@ body {
   line-height: 1.4;
 }
 
+#title-block-header:empty {
+  display: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-sans);
   font-weight: 700;
@@ -136,6 +140,28 @@ h1, h1.title {
   color: #fff !important;
 }
 
+.oracle-consult-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75em;
+}
+
+.oracle-consult-button .software-badge {
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.55em 1.4em;
+  border: 2px solid #333;
+  border-radius: 999px;
+  color: #fff !important;
+  background: linear-gradient(135deg, #4335AC, #8A5CF6);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.oracle-consult-button .software-badge:hover {
+  background: linear-gradient(135deg, #5744c9, #a279ff);
+  transform: scale(1.05);
+}
+
 .terminal-name .typewriter {
   display: inline-block;
   white-space: nowrap;
@@ -215,15 +241,31 @@ img {
   outline: none;
 }
 
-.exhibition-photo img,
-.carousel-item img {
+.exhibition-photo img {
   max-height: 600px;
   width: auto;
   object-fit: contain;
 }
 
-.exhibition-carousel {
-  margin-top: 1em;
+.exhibition-carousel .carousel-item {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exhibition-carousel .carousel-item img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+}
+
+.exhibition-carousel .carousel-control-prev,
+.exhibition-carousel .carousel-control-next {
+  width: 2.5rem;
 }
 
 div.quarto-about-trestles .about-contents {
