@@ -65,8 +65,8 @@ ggsave(
 ::: {.home-links}
 - [<i class="bi bi-envelope"></i> Email](mailto:karissa.whiting@gmail.com)
 - [<i class="bi bi-github"></i> GitHub](https://github.com/karissawhiting)
-- [Research](research.qmd)
-- [Software](software.qmd)
+- [<i class="bi bi-journal-bookmark"></i> Research](research.qmd)
+- [<i class="bi bi-code-slash"></i> Software](software.qmd)
 :::
 
 :::
