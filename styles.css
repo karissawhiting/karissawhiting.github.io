@@ -40,6 +40,21 @@ h1, h1.title {
   }
 }
 
+/* Below the navbar's collapse breakpoint (lg, 992px), Quarto reserves a
+   fixed 115px on `.navbar-brand-container` for a toggler + search icon
+   pair, regardless of whether a search box exists. We only have the
+   toggler, so that reservation leaves too little room for the full
+   "Karissa Whiting" typewriter text on narrow phones — Bootstrap's
+   `.navbar-brand { overflow: hidden; text-overflow: ellipsis }` then
+   clips it down to just the "&gt;" prompt and an ellipsis, and it never
+   visibly grows as the animation types. Give it back the space the
+   missing search icon would have used. */
+@media (max-width: 991.98px) {
+  .navbar-brand-container {
+    max-width: calc(100% - 56px);
+  }
+}
+
 /* Above the navbar's collapse breakpoint (lg, 992px) the nav links always
    render inline instead of behind the hamburger. In roughly the 992-1200px
    range there isn't quite enough room for the full nav plus the brand name,
@@ -285,78 +300,77 @@ img {
   width: 2.5rem;
 }
 
-div.quarto-about-trestles .about-contents {
+/* Homepage layout: image + link list beside the bio text. One breakpoint,
+   stacking to a single column on mobile instead of Quarto's multi-tier
+   trestles template (see git history for that version). */
+.home-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.home-entity {
+  flex: 0 0 42%;
+  min-width: 0;
+  text-align: center;
+}
+
+.home-image {
+  width: min(75%, 27em);
+  margin: 0 auto 1em;
+}
+
+.home-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding-left: 0;
+  margin: 0;
+}
+
+.home-links a {
+  display: inline-block;
+  border: solid 1px #999;
+  border-radius: 4px;
+  padding: 0.25em 0.6em;
+  font-size: 0.85em;
+  color: #555;
+  text-decoration: none;
+}
+
+.home-links a:hover {
+  color: var(--accent-1);
+  border-color: var(--accent-1);
+}
+
+.home-links a i.bi {
+  margin-right: 0.2em;
+}
+
+.home-contents {
+  flex: 1 1 0;
+  min-width: 0;
   border-left: solid 1px #dee2e6;
   padding-left: 1.5em;
-  /* .quarto-about-trestles is a Quarto "page-full" block that spans edge to
-     edge of the viewport, unlike the exhibitions page's main.content, which
-     sits in the normal body-content grid column and so gets an extra 1.5em
-     gutter reserved after it before the screen edge. Add that same 1.5em
-     here (on top of main.content's shared padding-right: 3em) so the right
-     padding matches the exhibitions page. */
-  padding-right: 1.5em;
 }
 
-@media (min-width: 850px) {
-  div.quarto-about-trestles {
-    align-items: center;
+@media (max-width: 767.98px) {
+  .home-layout {
+    flex-direction: column;
   }
 
-  /* Quarto's own CSS makes .about-contents and the nested main.content grid
-     containers with a 500px-minimum column (via a selector with higher
-     specificity than a plain class selector here), which stops the text
-     side from shrinking whenever the entity/contents row layout is active
-     (both here and in Quarto's own >=992px row layout). Drop the grid
-     entirely so this text column behaves like a plain block — the same way
-     .exhibition-writeup does. */
-  div.quarto-about-trestles .about-contents,
-  div.quarto-about-trestles main.content {
-    display: block !important;
-    min-width: 0;
-  }
-}
-
-/* Quarto's trestles template stacks to a vertical layout below 992px;
-   hold the side-by-side layout down to 850px instead. */
-@media (min-width: 850px) and (max-width: 991.98px) {
-  div.quarto-about-trestles {
-    flex-direction: row;
-  }
-
-  div.quarto-about-trestles .about-entity {
-    flex: 0 0 42%;
-    min-width: 0;
-  }
-
-  div.quarto-about-trestles .about-contents {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-
-  div.quarto-about-trestles .about-entity .about-links {
-    flex-direction: row;
-    column-gap: 0.8em;
-    row-gap: 15px;
-    flex-wrap: wrap;
-    width: auto;
-    padding-bottom: 0;
-  }
-
-  div.quarto-about-trestles .about-entity .about-link {
-    font-size: 0.8em;
-    padding: 0.25em 0.5em;
-    border-radius: 4px;
-  }
-}
-
-@media (max-width: 849.98px) {
-  div.quarto-about-trestles .about-entity .about-links {
-    align-items: center;
-  }
-
-  div.quarto-about-trestles .about-entity .about-links .about-link {
+  .home-entity {
     flex: 0 0 auto;
-    width: auto;
+    width: 100%;
+  }
+
+  .home-contents {
+    border-left: none;
+    padding-left: 0;
   }
 }
 
@@ -390,8 +404,12 @@ div.quarto-about-trestles .about-contents {
   }
 }
 
-main.content {
-  padding-right: 3em;
+/* Matches the custom grid gutter added below, which only exists at
+   >=768px; on mobile this padding just ate into already-tight width. */
+@media (min-width: 768px) {
+  main.content {
+    padding-right: 3em;
+  }
 }
 
 /* Let the main content column scale with the viewport instead of

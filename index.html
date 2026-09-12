@@ -40,6 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -197,41 +198,42 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-trestles page-columns page-full">
-  <div class="about-entity">
-    <img src="images/pulsar-art.svg" class="about-image
-  rounded " style="width: min(75%, 27em);">
-<header id="title-block-header" class="quarto-title-block"></header>
-    <div class="about-links">
-  <a href="mailto:karissa.whiting@gmail.com" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-  <a href="https://github.com/karissawhiting" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-  <a href="/research.html" class="about-link" rel="" target="">
-     <span class="about-link-text">Research</span>
-  </a>
-  <a href="/software.html" class="about-link" rel="" target="">
-     <span class="about-link-text">Software</span>
-  </a>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div class="home-layout">
+<div class="home-entity">
+<p><img src="images/pulsar-art.svg" class="home-image img-fluid"></p>
+<div class="home-links">
+<ul>
+<li><a href="mailto:karissa.whiting@gmail.com"><i class="bi bi-envelope"></i> Email</a></li>
+<li><a href="https://github.com/karissawhiting"><i class="bi bi-github"></i> GitHub</a></li>
+<li><a href="./research.html">Research</a></li>
+<li><a href="./software.html">Software</a></li>
+</ul>
 </div>
-  </div>
-  <div class="about-contents page-columns page-full"><main class="content page-columns page-full" id="quarto-document-content">
-<div class="column-page">
+</div>
+<div class="home-contents">
 <p>I am a Research Biostatistician at <a href="https://www.mskcc.org/">Memorial Sloan Kettering Cancer Center</a> in New York City where my research focuses on leveraging multi-modal genomic, radiology and pathology data to characterize cancer risk and predict clinical outcomes.</p>
 <p>Much of my work is building the tooling behind the research. This includes developing streamlined, validated data pipelines for analyzing large, multi-source biomedical datasets, and open-source R packages that make complex analysis tasks more transparent and reproducible. I also have experience designing and analyzing clinical trials and observational studies. Earlier in my career I worked on a team to build and validate digital surveillance tools for detecting emerging infectious disease threats.</p>
 <p>I earned my M.S. in Biostatistics at Columbia University, Mailman School of Public Health. I am an R enthusiast interested in how to <a href="https://www.karissawhiting.com/reproducibility-in-r/#/ai-best-practices">leverage AI responsibly</a> to improve the quality and speed of research. In my spare time, I tinker with circuits, and occasionally <a href="./exhibitions.html">make art</a>.</p>
 </div>
-
-
-</main></div>
 </div>
- <!-- /main -->
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

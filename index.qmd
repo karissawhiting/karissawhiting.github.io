@@ -1,21 +1,6 @@
 ---
 title: " "
 pagetitle: "Karissa Whiting"
-image: images/pulsar-art.svg
-about:
-  template: trestles
-  image-width: min(75%, 27em)
-  links:
-    - text: Email
-      icon: envelope
-      url: "mailto:karissa.whiting@gmail.com"
-    - text: GitHub
-      icon: github
-      url: "https://github.com/karissawhiting"
-    - text: Research
-      url: "research.qmd"
-    - text: Software
-      url: "software.qmd"
 ---
 
 ```{r echo = FALSE, message=FALSE, warning=FALSE, include=FALSE}
@@ -65,19 +50,35 @@ p <- p + xlab("") + ylab("")
 ggsave(
   "images/pulsar-art.svg",
   p,
-  width = 3.5,
-  height = 4.2,
+  width = 5.5,
+  height = 5.9,
   bg = "white"
 )
 ```
 
-::: {.column-page}
+::: {.home-layout}
 
+::: {.home-entity}
+
+![](images/pulsar-art.svg){.home-image}
+
+::: {.home-links}
+- [<i class="bi bi-envelope"></i> Email](mailto:karissa.whiting@gmail.com)
+- [<i class="bi bi-github"></i> GitHub](https://github.com/karissawhiting)
+- [Research](research.qmd)
+- [Software](software.qmd)
+:::
+
+:::
+
+::: {.home-contents}
 
 I am a Research Biostatistician at [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/) in New York City where my research focuses on leveraging multi-modal genomic, radiology and pathology data to characterize cancer risk and predict clinical outcomes.
 
-Much of my work is building the tooling behind the research. This includes developing streamlined, validated data pipelines for analyzing large, multi-source biomedical datasets, and open-source R packages that make complex analysis tasks more transparent and reproducible. I also have experience designing and analyzing clinical trials and observational studies. Earlier in my career I worked on a team to build and validate digital surveillance tools for detecting emerging infectious disease threats. 
+Much of my work is building the tooling behind the research. This includes developing streamlined, validated data pipelines for analyzing large, multi-source biomedical datasets, and open-source R packages that make complex analysis tasks more transparent and reproducible. I also have experience designing and analyzing clinical trials and observational studies. Earlier in my career I worked on a team to build and validate digital surveillance tools for detecting emerging infectious disease threats.
 
 I earned my M.S. in Biostatistics at Columbia University, Mailman School of Public Health. I am an R enthusiast interested in how to [leverage AI responsibly](https://www.karissawhiting.com/reproducibility-in-r/#/ai-best-practices) to improve the quality and speed of research. In my spare time, I tinker with circuits, and occasionally [make art](exhibitions.qmd).
+
+:::
 
 :::
