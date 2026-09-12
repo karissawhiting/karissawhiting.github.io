@@ -13,6 +13,7 @@ website:
     left: "© Karissa Whiting"
   navbar:
     title: "<span class=\"terminal-name\"><span class=\"terminal-prompt\">&gt;</span> <span class=\"typewriter\">Karissa Whiting</span></span>"
+    toggle-position: right
     right:
       - text: "Research"
         icon: journal-bookmark
