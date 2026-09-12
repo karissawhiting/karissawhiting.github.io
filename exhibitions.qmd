@@ -19,31 +19,31 @@ title: ""
 
 ::: {.carousel-inner}
 ::: {.carousel-item .active}
-![](exhibitions/oracle-7.png)
+![](exhibitions/oracle-7.jpg)
 :::
 ::: {.carousel-item}
-![](exhibitions/oracle-4.png)
+![](exhibitions/oracle-4.jpg)
 :::
 ::: {.carousel-item}
-![](exhibitions/oracle-2.png)
+![](exhibitions/oracle-2.jpg)
 :::
 ::: {.carousel-item}
-![](exhibitions/oracle-5.png)
+![](exhibitions/oracle-5.jpg)
 :::
 ::: {.carousel-item}
-![](exhibitions/oracle-6.png)
+![](exhibitions/oracle-6.jpg)
 :::
 ::: {.carousel-item}
-![](exhibitions/oracle-3.png)
+![](exhibitions/oracle-3.jpg)
 :::
 ::: {.carousel-item}
-![](exhibitions/oracle-8.png)
+![](exhibitions/oracle-8.jpg)
 :::
 ::: {.carousel-item}
-![](exhibitions/oracle-9.png)
+![](exhibitions/oracle-9.jpg)
 :::
 ::: {.carousel-item}
-![](exhibitions/oracle-10.png)
+![](exhibitions/oracle-10.jpg)
 :::
 :::
 
