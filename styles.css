@@ -46,20 +46,21 @@ h1, h1.title {
   }
 }
 
-/* Below the navbar's collapse breakpoint (lg, 992px), Quarto reserves a
-   fixed 115px on `.navbar-brand-container` for a toggler + search icon
-   pair, regardless of whether a search box exists. We only have the
-   toggler, so that reservation leaves too little room for the full
-   "Karissa Whiting" typewriter text on narrow phones — Bootstrap's
-   `.navbar-brand { overflow: hidden; text-overflow: ellipsis }` then
-   clips it down to just the "&gt;" prompt and an ellipsis, and it never
-   visibly grows as the animation types. Give it back the space the
-   missing search icon would have used, and stop the flex layout from
-   squeezing the brand container any further once it has that space. */
+/* Below the navbar's collapse breakpoint (lg, 992px), Bootstrap's
+   `.navbar-brand { overflow: hidden; text-overflow: ellipsis }` clips the
+   "Karissa Whiting" typewriter text down to just the "&gt;" prompt and an
+   ellipsis on narrow screens, and it never visibly grows as the animation
+   types — even though there's actual empty space next to it before the
+   search icon. Turn off the clipping so the full text always renders. */
 @media (max-width: 991.98px) {
   .navbar-brand-container {
     max-width: calc(100% - 56px);
     flex-shrink: 0;
+  }
+
+  .navbar-brand {
+    overflow: visible;
+    text-overflow: clip;
   }
 }
 
