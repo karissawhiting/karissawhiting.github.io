@@ -82,7 +82,7 @@ format:
                   typeChar(correctTail, function () {
                     setTimeout(function () {
                       el.classList.add("stopped");
-                    }, 10 * 750);
+                    }, 6 * 750);
                   });
                 });
               }, 500);
