@@ -27,10 +27,10 @@
 
 - date: 2026-06-01
   role: "Instructor"
-  title: "Reproducible Analyses in R & AI Best Practices"
+  title: "Reproducible Analyses in R & Tips for Coding With AI"
   venue: "Genomics Experience for Masters Students Program (GEMS)"
   type: "Workshop"
-  website_url: "https://www.karissawhiting.com/reproducibility-in-r/#/coding-workshop-part-1"
+  slides_url: "https://www.karissawhiting.com/reproducibility-in-r/#/coding-workshop-part-1"
 
 - date: 2024-08-01
   title: "Roundtable Presenter: Harnessing Multi-institutional Genomic Data for Reproducible Biomedical Research"
@@ -96,7 +96,7 @@
   title: "Reproducibility with {gtsummary}"
   venue: "R/Medicine"
   type: "Workshop"
-  website_url: "http://www.danieldsjoberg.com/rmedicine-gtsummary/"
+  slides_url: "http://www.danieldsjoberg.com/rmedicine-gtsummary/"
   video_url: "https://www.youtube.com/watch?v=fjAMsGISyXw&t=627s"
 
 - date: 2019-01-01
